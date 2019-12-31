@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailViewController: UIViewController , UINavigationControllerDelegate,UIViewControllerTransitioningDelegate {
-    
+    let userDefaults = UserDefaults.standard
     public var initialAmount: Double = 0
     public var totalBill = 0.0
     public var each = 0.0
@@ -102,35 +102,40 @@ class DetailViewController: UIViewController , UINavigationControllerDelegate,UI
     @IBAction func doneTapped(_ sender: UIButton) {
        
     }
+    
+    func setUpForResult() {
+        
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Done" {
             let destVC = segue.destination as! ResultViewController
             destVC.color = view.backgroundColor ?? UIColor.red
-           
+         
+             
             if tip == 0 && people == 1 {
                 
                 destVC.firstBill = "\(Double(initialAmount))"
                 destVC.people = people
                 destVC.tip = tip
                 destVC.totalBill = "\(Int(initialAmount))"
-                destVC.eachBill = "\(Int(initialAmount.rounded()))"
-                destVC.tipAmount = tipAmount.rounded()
+                destVC.eachBill = "\(Int(initialAmount))"
+                destVC.tipAmount = tipAmount
             } else if tip == 0 && people != 1 {
                  
                 destVC.firstBill = "\(Double(initialAmount))"
                 destVC.people = people
                 destVC.tip = tip
                 destVC.totalBill = "\(Int(initialAmount))"
-                destVC.eachBill = "\(Int(each.rounded()))"
-                destVC.tipAmount = tipAmount.rounded()
+                destVC.eachBill = "\(Int(each))"
+                destVC.tipAmount = tipAmount
             } else if tip != 0 && people == 1 {
                
                 destVC.firstBill = "\(Double(initialAmount))"
                 destVC.people = people
                 destVC.tip = tip
                 destVC.totalBill = "\(Int(totalBill))"
-                destVC.eachBill = "\(Int(totalBill.rounded()))"
-                destVC.tipAmount = tipAmount.rounded()
+                destVC.eachBill = "\(Int(totalBill))"
+                destVC.tipAmount = tipAmount
             }
             else {
                 
@@ -138,16 +143,18 @@ class DetailViewController: UIViewController , UINavigationControllerDelegate,UI
                 destVC.people = people
                 destVC.tip = tip
                 destVC.totalBill = "\(Int(totalBill))"
-                destVC.eachBill = "\(Int(each.rounded()))"
-                destVC.tipAmount = tipAmount.rounded()
+                destVC.eachBill = "\(Int(each))"
+                destVC.tipAmount = tipAmount
             }
         }
+        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         doneButton.setTitleColor(buttonColor, for: .normal)
+       
     }
     
 

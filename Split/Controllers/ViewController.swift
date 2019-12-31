@@ -11,6 +11,10 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    let userDefaults = UserDefaults.standard
+    
+    var soundOn: Bool = false
+     
     @IBOutlet weak var dotLabel: UIButton!
     @IBOutlet weak var nextLabel: UIButton!
     @IBOutlet var mainView: UIView!
@@ -37,9 +41,13 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func numberTapped(_ sender: UIButton) {
-      
-            audioPlayer = try! AVAudioPlayer(contentsOf: pianoSound)
-            audioPlayer.play()
+     soundOn = userDefaults.bool(forKey: "SoundValue")
+            if soundOn == true {
+                audioPlayer = try! AVAudioPlayer(contentsOf: pianoSound)
+                audioPlayer.play()
+            }
+//            audioPlayer = try! AVAudioPlayer(contentsOf: pianoSound)
+//            audioPlayer.play()
        
         if number.count < 9  {
             number.append(sender.currentTitle!)
@@ -110,12 +118,17 @@ class ViewController: UIViewController {
         if number.contains(".") {
                    dotLabel.isEnabled = false
                }
-        
+          soundOn = userDefaults.bool(forKey: "SoundValue")
+
 //        let tapGestureRecognizer = UITapGestureRecognizer()
 //           tapGestureRecognizer.numberOfTouchesRequired = 1
 //           tapGestureRecognizer.numberOfTapsRequired = 1
 //           tapGestureRecognizer.addTarget(self, action: #selector(userTapped(_:)))
 
+        
+    }
+    
+    @IBAction func unwindToOne(_ sender: UIStoryboardSegue) {
         
     }
 //    @objc func userTapped(_ : UITapGestureRecognizer) {

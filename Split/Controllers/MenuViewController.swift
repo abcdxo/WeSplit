@@ -100,4 +100,8 @@ class MenuViewController: UITableViewController, MFMailComposeViewControllerDele
        controller.dismiss(animated: true)
     }
   }
+    
+   @IBAction func unwindToSetting(_ sender: UIStoryboardSegue) {
+        
+    }
 }

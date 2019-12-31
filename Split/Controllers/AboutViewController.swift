@@ -17,7 +17,7 @@ class AboutViewController: UIViewController {
     }
   
     @IBAction func dismissTapped(_ sender: UIButton) {
-     self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+//     self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func goToTwitter(_ sender: UIButton) {
