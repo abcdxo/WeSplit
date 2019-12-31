@@ -125,16 +125,16 @@ class DetailViewController: UIViewController , UINavigationControllerDelegate,UI
                 destVC.firstBill = "\(Double(initialAmount))"
                 destVC.people = people
                 destVC.tip = tip
-                destVC.totalBill = "\(Int(initialAmount))"
-                destVC.eachBill = "\(Int(each))"
+                destVC.totalBill = "\((initialAmount))"
+                destVC.eachBill = "\((each))"
                 destVC.tipAmount = tipAmount
             } else if tip != 0 && people == 1 {
                
                 destVC.firstBill = "\(Double(initialAmount))"
                 destVC.people = people
                 destVC.tip = tip
-                destVC.totalBill = "\(Int(totalBill))"
-                destVC.eachBill = "\(Int(totalBill))"
+                destVC.totalBill = "\((totalBill))"
+                destVC.eachBill = "\((totalBill))"
                 destVC.tipAmount = tipAmount
             }
             else {
@@ -142,8 +142,8 @@ class DetailViewController: UIViewController , UINavigationControllerDelegate,UI
                 destVC.firstBill = "\(Double(initialAmount))"
                 destVC.people = people
                 destVC.tip = tip
-                destVC.totalBill = "\(Int(totalBill))"
-                destVC.eachBill = "\(Int(each))"
+                destVC.totalBill = "\((totalBill))"
+                destVC.eachBill = "\((each))"
                 destVC.tipAmount = tipAmount
             }
         }

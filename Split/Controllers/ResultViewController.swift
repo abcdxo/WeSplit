@@ -38,27 +38,37 @@ class ResultViewController: UIViewController {
         peopleLabel.textColor = color
         eachLabel.textColor = color
         if roundOn == true {
-                 peopleLabel.text = "People: \(people)"
-                 tipLabel.text = "Tip: \(tip)% (\(tipAmount.rounded()))"
-                 billLabel.text = "Bill: \(Double(firstBill)!.rounded() )"
-                 totalLabel.text = "Total bill: \(Double(totalBill)!.rounded() )"
-                 eachLabel.text = "Each: \(Double(eachBill)!.rounded())"
-             } else if roundOn == false {
-                 peopleLabel.text = "People: \(people)"
-                 tipLabel.text = "Tip: \(tip)% (\(tipAmount))"
-                 billLabel.text = "Bill: \(firstBill)"
-                 totalLabel.text = "Total bill: \(totalBill)"
-                 eachLabel.text = "Each: \(eachBill)"
-             }
+            peopleLabel.text = "People: \(people)"
+            tipLabel.text = "Tip: \(tip)% (\(tipAmount.rounded()))"
+            billLabel.text = "Bill: \(Double(firstBill)!.rounded())"
+            totalLabel.text = "Total bill: \(Double(totalBill)!.rounded() )"
+            eachLabel.text = "Each: \(Double(eachBill)!.rounded())"
+        } else if roundOn == false {
+            peopleLabel.text = "People: \(people)"
+            tipLabel.text = "Tip: \(tip)% (\(tipAmount))"
+            billLabel.text = "Bill: \(firstBill)"
+            totalLabel.text = "Total bill: \(totalBill)"
+            eachLabel.text = "Each: \(eachBill)"
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
 //        super.viewWillAppear(animated)
          roundOn = userDefaults.bool(forKey: "RoundValue")
-     
+     if roundOn == true {
+                peopleLabel.text = "People: \(people)"
+                tipLabel.text = "Tip: \(tip)% (\(tipAmount.rounded()))"
+                billLabel.text = "Bill: \(Double(firstBill)!.rounded())"
+                totalLabel.text = "Total bill: \(Double(totalBill)!.rounded() )"
+                eachLabel.text = "Each: \(Double(eachBill)!.rounded())"
+            } else if roundOn == false {
+                peopleLabel.text = "People: \(people)"
+                tipLabel.text = "Tip: \(tip)% (\(tipAmount))"
+                billLabel.text = "Bill: \(firstBill)"
+                totalLabel.text = "Total bill: \(totalBill)"
+                eachLabel.text = "Each: \(eachBill)"
+            }
     }
     
-
- 
     @IBAction func sharedButtonTapped(_ sender: UIButton) {
         //Screenshot current screen
         let bounds = UIScreen.main.bounds
