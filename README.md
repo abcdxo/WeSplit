@@ -1,0 +1,5 @@
+# WeSplit
+
+
+
+Tip calculating app!
