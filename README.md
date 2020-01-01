@@ -3,3 +3,4 @@
 
 
 Tip calculating app!
+![](WeSplit.gif)
