@@ -13,6 +13,8 @@ Calculate tip and amount per person.
 -Play sound.
 
 
+-Theme change.
+
 
 -Supporting Dark mode.
 
