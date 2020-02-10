@@ -3,7 +3,14 @@
 
 # Usage:
 
-Calculate tip and amount per person has to pay.
+Calculate tip and amount per person.
+
+# Feature:
+
+Round total
+Play sound
+Dark mode
+
 
 
 # App Store Download: 
