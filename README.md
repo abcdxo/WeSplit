@@ -1,5 +1,4 @@
-# WeSplit
-
+# WeSplit :  Tip calculating app
 
 # Usage:
 
@@ -18,5 +17,5 @@ https://apps.apple.com/us/app/wesplitt/id1493355344
 
 
 
-Tip calculating app!
+
 ![](WeSplit.gif)
