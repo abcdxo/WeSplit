@@ -6,15 +6,15 @@ Calculate tip and amount per person.
 
 # Feature:
 
--Round total
+-Round total.
 
 
 
--Play sound
+-Play sound.
 
 
 
--Supporting Dark mode
+-Supporting Dark mode.
 
 
 
