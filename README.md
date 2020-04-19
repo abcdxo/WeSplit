@@ -1,5 +1,5 @@
 # WeSplit :  Tip calculating app
-
+- This is my first iOS app I write after 2 months of self teaching.
 # Usage:
 
 Calculate tip and amount per person.
