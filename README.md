@@ -18,12 +18,10 @@ Calculate tip and amount per person.
 
 - Supporting Dark mode.
 
+# Visualization
+
+![](WeSplit.gif)
 
 
 # App Store Download: 
 https://apps.apple.com/us/app/wesplitt/id1493355344
-
-
-
-
-![](WeSplit.gif)
