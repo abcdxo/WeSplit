@@ -5,7 +5,7 @@
 
 Calculate tip and amount per person.
 
-# Feature:
+# Features:
 
   * Round total.
   * Play sound.
